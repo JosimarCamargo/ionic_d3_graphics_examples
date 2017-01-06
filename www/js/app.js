@@ -31,57 +31,103 @@ function MainController() {
 
   vm.options = {  
     chart: {
-      type: "pieChart",
-      height: 500,
-      x: function(d){return d.key;},
-      y: function(d){return d.y;},
-      showLabels: false,
+      type: 'multiBarHorizontalChart',
+      height: 450,
+      x: function(d){return d.label;},
+      y: function(d){return d.value;},
+      showControls: true,
+      showValues: true,
       duration: 500,
-      labelThreshold: 0.01,
-      labelSunbeamLayout: true,
-      width: 320,
-      title: "Sweet!",
-      donut: true,
-      tooltips: false,
-      legend: {
-        margin: {
-          top: 5,
-          right: 0,
-          bottom: 5,
-          left: 0
+      xAxis: {
+        showMaxMin: false
+      },
+      yAxis: {
+        axisLabel: 'GitHub Stars',
+        tickFormat: function(d) {
+          return d3.format(',.2f')(d);
         }
       }
     }
   };
 
+  var stars = {  
+    "Angular" : [18567 , 44913],
+    "Backbone" : [16651 , 23633],
+    "Ember" : [9023 , 15249],
+    "Flight" : [4655 , 6380],
+    "Knockout" : [4487 , 6990],
+    "Marionette" : [4261 , 6629],
+    "React" : [3691 , 32656]
+  };
+
   vm.data = [  
     {
-      key: "Angular",
-      y: 18567
+      "key": "As of Jan '14",
+      "color": "#1f77b4",
+      "values": [
+         { 
+           "label" : "Angular" , 
+           "value" : stars.Angular[0] 
+         },
+         { 
+           "label" : "Backbone" , 
+           "value" : stars.Backbone[0] 
+         },
+         { 
+           "label" : "Ember" , 
+           "value" : stars.Ember[0] 
+         },
+         { 
+           "label" : "Flight" , 
+           "value" : stars.Flight[0] 
+         },
+         { 
+           "label" : "Knockout" , 
+           "value" : stars.Knockout[0] 
+         },
+         { 
+           "label" : "Marionette" , 
+           "value" : stars.Marionette[0] 
+         },
+         { 
+           "label" : "React" , 
+           "value" : stars.React[0] 
+         }
+      ]
     },
     {
-      key: "Backbone",
-      y: 16651
-    },
-    {
-      key: "Ember",
-      y: 9023
-    },
-    {
-      key: "Flight",
-      y: 4655
-    },
-    {
-      key: "Knockout",
-      y: 4487
-    },
-    {
-      key: "Marionette",
-      y: 4261
-    },
-    {
-      key: "React",
-      y: 3691
+      "key": "As of Dec '15",
+      "color": "#2b93db",
+      "values": [
+         { 
+           "label" : "Angular" , 
+           "value" : stars.Angular[1] - stars.Angular[0] 
+         },
+         { 
+           "label" : "Backbone" , 
+           "value" : stars.Backbone[1] - stars.Backbone[0] 
+         },
+         { 
+           "label" : "Ember" , 
+           "value" : stars.Ember[1] - stars.Ember[0] 
+         },
+         { 
+           "label" : "Flight" , 
+           "value" : stars.Flight[1] - stars.Flight[0] 
+         },
+         { 
+           "label" : "Knockout" , 
+           "value" : stars.Knockout[1] - stars.Knockout[0] 
+         },
+         { 
+           "label" : "Marionette" , 
+           "value" : stars.Marionette[1] - stars.Marionette[0] 
+         },
+         { 
+           "label" : "React" , 
+           "value" : stars.React[1] - stars.React[0] 
+         }
+      ]
     }
   ];
 }
