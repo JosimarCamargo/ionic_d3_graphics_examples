@@ -31,18 +31,22 @@ function MainController() {
 
   vm.options = {  
     chart: {
-      type: 'pieChart',
+      type: "pieChart",
       height: 500,
       x: function(d){return d.key;},
       y: function(d){return d.y;},
-      showLabels: true,
+      showLabels: false,
       duration: 500,
       labelThreshold: 0.01,
       labelSunbeamLayout: true,
+      width: 320,
+      title: "Sweet!",
+      donut: true,
+      tooltips: false,
       legend: {
         margin: {
           top: 5,
-          right: 35,
+          right: 0,
           bottom: 5,
           left: 0
         }
