@@ -4,6 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic','nvd3'])
+.controller('MainController', MainController)
+
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,3 +25,59 @@ angular.module('starter', ['ionic','nvd3'])
     }
   });
 })
+
+function MainController() {  
+  var vm = this;
+
+  vm.options = {  
+    chart: {
+      type: 'pieChart',
+      height: 500,
+      x: function(d){return d.key;},
+      y: function(d){return d.y;},
+      showLabels: true,
+      duration: 500,
+      labelThreshold: 0.01,
+      labelSunbeamLayout: true,
+      legend: {
+        margin: {
+          top: 5,
+          right: 35,
+          bottom: 5,
+          left: 0
+        }
+      }
+    }
+  };
+
+  vm.data = [  
+    {
+      key: "One",
+      y: 5
+    },
+    {
+      key: "Two",
+      y: 2
+    },
+    {
+      key: "Three",
+      y: 9
+    },
+    {
+      key: "Four",
+      y: 7
+    },
+    {
+      key: "Five",
+      y: 4
+    },
+    {
+      key: "Six",
+      y: 3
+    },
+    {
+      key: "Seven",
+      y: .5
+    }
+  ];
+}
