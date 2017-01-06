@@ -52,32 +52,32 @@ function MainController() {
 
   vm.data = [  
     {
-      key: "One",
-      y: 5
+      key: "Angular",
+      y: 18567
     },
     {
-      key: "Two",
-      y: 2
+      key: "Backbone",
+      y: 16651
     },
     {
-      key: "Three",
-      y: 9
+      key: "Ember",
+      y: 9023
     },
     {
-      key: "Four",
-      y: 7
+      key: "Flight",
+      y: 4655
     },
     {
-      key: "Five",
-      y: 4
+      key: "Knockout",
+      y: 4487
     },
     {
-      key: "Six",
-      y: 3
+      key: "Marionette",
+      y: 4261
     },
     {
-      key: "Seven",
-      y: .5
+      key: "React",
+      y: 3691
     }
   ];
 }
