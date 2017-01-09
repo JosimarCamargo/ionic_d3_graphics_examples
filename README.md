@@ -1,0 +1,5 @@
+- [ ] Rewrite the commits descriptions in english.
+- [ ] Add better description
+- [ ] Include <p>fonte: <a href="http://gonehybrid.com/bring-your-ionic-app-to-life-getting-started-with-d3-js/">http://gonehybrid.com/bring-your-ionic-app-to-life-getting-started-with-d3-js/</a> tive que fazer alterações para funcionar</p> on description
+- [ ] Include mention to d3, Ionic and Angular e etc.
+- [ ] Remember this is only for example
