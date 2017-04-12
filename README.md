@@ -1,5 +1,7 @@
 - [ ] Rewrite the commits descriptions in english.
 - [ ] Add better description
 - [ ] Include <p>fonte: <a href="http://gonehybrid.com/bring-your-ionic-app-to-life-getting-started-with-d3-js/">http://gonehybrid.com/bring-your-ionic-app-to-life-getting-started-with-d3-js/</a> tive que fazer alterações para funcionar</p> on description
-- [ ] Include mention to d3, Ionic and Angular e etc.
+- [ ] Include mention to d3, Ionic and Angular and etc.
 - [ ] Remember this is only for example
+- [ ] Examples how to edit the graphic <a href="http://nvd3.org/examples/index.html">http://nvd3.org/examples/index.html</a>
+- [ ] Examples how to edit the graphic <a href="http://krispo.github.io/angular-nvd3/#/">http://krispo.github.io/angular-nvd3/</a>
